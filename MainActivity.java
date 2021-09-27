@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         hashMap.put("image_name",imgName);
                         hashMap.put("uri",uri.toString());
 
-                        dbref.setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        dbref.Child(key).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(MainActivity.this, "Image Uploaded Successfully", Toast.LENGTH_SHORT).show();
